@@ -37,6 +37,7 @@ public class RobotController : MonoBehaviour
 	{
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce)); 
+			Instantiate(this.gameObject, new Vector2(this.transform.position.x+10, this.transform.position.y), Quaternion.identity);
 		}
 	}
 
