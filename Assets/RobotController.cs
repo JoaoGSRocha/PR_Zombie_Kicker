@@ -3,6 +3,7 @@ using System.Collections;
 
 public class RobotController : MonoBehaviour
 {
+	public GameObject spawnObj;
 	public float maxSpeed = 10f;
 	bool facingRight = true;
 
@@ -14,7 +15,9 @@ public class RobotController : MonoBehaviour
 
 
 	void Start()
-	{}
+	{
+		InvokeRepeating("Spawn",  5, 5);
+	}
 	
 	void FixedUpdate()
 	{
@@ -37,8 +40,12 @@ public class RobotController : MonoBehaviour
 	{
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce)); 
-			Instantiate(this.gameObject, new Vector2(this.transform.position.x+10, this.transform.position.y), Quaternion.identity);
 		}
+	}
+	
+	void Spawn()
+	{
+		Instantiate(spawnObj, new Vector2(7.58f, -0.49f), Quaternion.identity);
 	}
 
 	void Flip()
