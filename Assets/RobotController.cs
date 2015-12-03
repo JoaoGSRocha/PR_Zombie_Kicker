@@ -7,15 +7,23 @@ public class RobotController : MonoBehaviour
 	bool facingRight = true;
 
 	bool grounded = false;
+	public Transform groundCheck;
+	float groundRadius = 0.2f;
+	public LayerMask whatIsGround;
+	public float jumpForce = 700;
+
 
 	void Start()
 	{}
 	
 	void FixedUpdate()
 	{
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+
 		float move = Input.GetAxis("Horizontal");
 		
-		rigidbody2D.velocity = new Vector2(move* maxSpeed, rigidbody2D.velocity.y);
+		GetComponent<Rigidbody2D>().velocity = new Vector2(move* maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
 		if (move > 0 &&!facingRight)
 		{
 			Flip();
@@ -24,6 +32,14 @@ public class RobotController : MonoBehaviour
 			Flip();
 		}
 	}
+
+	void Update()
+	{
+		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
+			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce)); 
+		}
+	}
+
 	void Flip()
 	{
 		facingRight = !facingRight;
