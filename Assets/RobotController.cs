@@ -13,12 +13,6 @@ public class RobotController : MonoBehaviour
 	public LayerMask whatIsGround;
 	public float jumpForce = 700;
 
-
-	void Start()
-	{
-		InvokeRepeating("Spawn",  5, 5);
-	}
-	
 	void FixedUpdate()
 	{
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
@@ -42,11 +36,7 @@ public class RobotController : MonoBehaviour
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce)); 
 		}
 	}
-	
-	void Spawn()
-	{
-		Instantiate(spawnObj, new Vector2(7.58f, -0.49f), Quaternion.identity);
-	}
+
 
 	void Flip()
 	{

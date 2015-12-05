@@ -1,12 +1,20 @@
 #pragma strict
-var moveSpeed = 10f;
 public var lifes = 6;
+var toLeft = false;
+var enemy: GameObject;
+private var moveSpeed : Vector2;
+var rb: Rigidbody2D;
 function Start()
 {
+	rb=	GetComponent.<Rigidbody2D>();
+	moveSpeed = new Vector2(3.0f,0.0f);
 }
 function FixedUpdate()
 {
-	transform.position.x -= moveSpeed * Time.deltaTime;
+	if(toLeft)	
+		rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime);
+	else
+		rb.MovePosition(rb.position - moveSpeed * Time.fixedDeltaTime);
 }
 
 	
