@@ -5,6 +5,7 @@ static var toLeft = false;
 var enemy: GameObject;
 private var moveSpeed : Vector2;
 var rb: Rigidbody2D;
+public var en : EnemyMovement;
 
 function Start()
 {
@@ -13,12 +14,17 @@ function Start()
 
 function Spawn()
 {
-	if(spawnObj.name=="Spawner_02"){
-		Instantiate(enemy, new Vector2(spawnObj.transform.position.x,spawnObj.transform.position.y), Quaternion.identity);
-		toLeft=true;
+	if(name=="Spawner_02"){
+
+		var clone : GameObject;
+		clone =  Instantiate(enemy, new Vector2(spawnObj.transform.position.x,spawnObj.transform.position.y), Quaternion.identity);
+        en = clone.GetComponent("EnemyMovement");
+        en.toLeft = true;
+        Debug.Log(en.toLeft);
 	}else{
-		toLeft=false;
-		Instantiate(enemy, new Vector2(spawnObj.transform.position.x,spawnObj.transform.position.y), Quaternion.identity);
+		toLeft=true;
+		Instantiate(enemy, new Vector2(spawnObj.transform.position.x,spawnObj.transform.position.y), Quaternion.identity); 
+		
 	}
 }
 
