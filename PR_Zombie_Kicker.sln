@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{B088C7A4-F54A-0933-4173-F025F8A99C8F}") = "PR_Zombie_Kicker", "Assembly-CSharp.csproj", "{65BAB5AA-E260-C530-0520-D420EB77346B}"
 EndProject
-Project("{B088C7A4-F54A-0933-4173-F025F8A99C8F}") = "PR_Zombie_Kicker", "Assembly-UnityScript.unityproj", "{30D842CA-B426-A5F6-AF07-E4BF0080A22E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,15 +13,11 @@ Global
 		{65BAB5AA-E260-C530-0520-D420EB77346B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65BAB5AA-E260-C530-0520-D420EB77346B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65BAB5AA-E260-C530-0520-D420EB77346B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{30D842CA-B426-A5F6-AF07-E4BF0080A22E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30D842CA-B426-A5F6-AF07-E4BF0080A22E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30D842CA-B426-A5F6-AF07-E4BF0080A22E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30D842CA-B426-A5F6-AF07-E4BF0080A22E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																							GlobalSection(MonoDevelopProperties) = preSolution
+																																	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

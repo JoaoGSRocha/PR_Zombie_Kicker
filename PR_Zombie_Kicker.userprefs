@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\spawnEnem.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts_My\SmoothCamera2D.cs">
     <Files>
-      <File FileName="Assets\RobotController.cs" Line="10" Column="24" />
-      <File FileName="Assets\spawnEnem.js" Line="3" Column="1" />
-      <File FileName="Assets\EnemyMovement.js" Line="15" Column="36" />
+      <File FileName="Assets\spawnEnem.js" Line="1" Column="1" />
+      <File FileName="Assets\EnemyMovement.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts_My\SmoothCamera2D.cs" Line="22" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
